@@ -1,7 +1,7 @@
 import Foundation
 
 public struct PackageDemo {
-    static func objectFromJSON<T: Codable>(_ filename: String) -> T? {
+    public static func objectFromJSON<T: Codable>(_ filename: String) -> T? {
         
         let decoder = JSONDecoder()
         
