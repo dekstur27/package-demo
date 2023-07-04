@@ -10,4 +10,13 @@ final class PackageDemoTests: XCTestCase {
             XCTFail()
         }
     }
+    
+    func testYAML() {
+        if let yamlString = PackageDemo.testYAML {
+            print(yamlString)
+            
+        } else {
+            XCTFail()
+        }
+    }
 }

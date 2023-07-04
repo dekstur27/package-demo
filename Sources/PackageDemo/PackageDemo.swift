@@ -30,5 +30,19 @@ public struct PackageDemo {
         return nil
         
     }()
+    
+    public static var testYAML: String? = {
+        let bundle = Bundle.module
+        if let fileUrl = bundle.url(forResource: "testYAML", withExtension: "yml") {
+            do {
+                let yamlData = try Data(contentsOf: fileUrl)
+                return String(data: yamlData, encoding: .utf8)
+            } catch {
+                print("xx-> \(error)")
+                return nil
+            }
+        }
+        return nil
+    }()
 }
 
