@@ -5,6 +5,9 @@ final class PackageDemoTests: XCTestCase {
     func testJSON() {
         if let jsonString = PackageDemo.testJSON {
             print(jsonString)
+            
+        } else {
+            XCTFail()
         }
     }
 }
