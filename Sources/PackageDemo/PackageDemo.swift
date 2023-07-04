@@ -14,6 +14,17 @@ public struct PackageDemo {
             return nil
         }
     }
+    
+    public static var testJSON: String? = {
+        if let path = Bundle.main.path(forResource: "testJSON", ofType: "json"),
+           let jsonData = try? Data(contentsOf: URL(string: path)!)
+        {
+            let string = String(data: jsonData, encoding: .utf8)
+            print("xx-> \(String(describing: string))")
+            return string
+        }
+        return nil
+    }()
 }
 
 
